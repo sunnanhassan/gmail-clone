@@ -2,7 +2,7 @@ import React from 'react'
 
 const Mail = () => {
   return (
-    <div>Mail</div>
+    <div>Mai2222l</div>
   )
 }
 

@@ -1,9 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { MdCropSquare } from "react-icons/md";
 import { FaCaretDown, FaUserFriends } from "react-icons/fa";
 import { IoMdRefresh, IoMdMore } from "react-icons/io";
-import { MdKeyboardArrowLeft, MdKeyboardArrowRight, MdInbox } from "react-icons/md";
+import {
+  MdKeyboardArrowLeft,
+  MdKeyboardArrowRight,
+  MdInbox,
+} from "react-icons/md";
 import { GoTag } from "react-icons/go";
+import Messages from "./Messages";
 
 const mailType = [
   {
@@ -58,8 +63,8 @@ const Inbox = () => {
               key={index}
               className={`flex items-center gap-5 p-4 w-52 hover:bg-gray-100 ${
                 mailTypeSelected === index
-                  ? 'border-b-4 border-b-blue-600 text-blue-600'
-                  : 'border-b-4 border-b-transparent'
+                  ? "border-b-4 border-b-blue-600 text-blue-600"
+                  : "border-b-4 border-b-transparent"
               }`}
               onClick={() => setMailTypeSelected(index)}
             >
@@ -71,7 +76,9 @@ const Inbox = () => {
 
         {/* Static Placeholder Content */}
         <div className="p-4 text-gray-500">
-          <p>No messages available. This is a static inbox layout.</p>
+          <p>
+            <Messages />
+          </p>
         </div>
       </div>
     </div>
